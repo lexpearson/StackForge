@@ -1,0 +1,19 @@
+{
+  "name": "squirestack",
+  "version": "0.0.1",
+  "description": "SquireStack — yer own noble arsenal in the virtual realm of heroes! Craft, collect, and oversee yer own characters on this platform, tailor-made for true gaming aficionados.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexpearson/SquireStack.git"
+  },
+  "author": "LexPearson <u.stonks.in.my.eyes@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lexpearson/SquireStack/issues"
+  },
+  "homepage": "https://github.com/lexpearson/SquireStack#readme"
+}
