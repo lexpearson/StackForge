@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+	<head>
+		<!-- META TAGS -->
+		<meta charset="UTF-8">
+		<meta name="theme-color" content="#ec1366">
+		<meta name="color-scheme" content="light">
+		
+		<meta name="format-detection" content="address=no">
+		<meta name="format-detection" content="telephone=no">
+		<meta name="msapplication-tap-highlight" content="no">
+		
+    <meta name="google" content="notranslate">
+		<meta content="IE=Edge" http-equiv="X-UA-Compatible">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover shrink-to-fit=no user-scalable=no">
+		
+		<!-- SEO [OPEN GRAPH] -->
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="en_EN">
+		<meta property="og:site_name" content="StackForge">
+		<meta property="og:title" content="StackForge - Your Noble Arsenal in the Virtual Realm of Heroes!">
+		<meta property="og:description" content="Craft, collect, and oversee your own characters on this platform, tailor-made for true gaming aficionados.">
+    <!-- SEO [X, AKA TWITTER] -->
+		<meta name="twitter:title" content="StackForge - Your Noble Arsenal in the Virtual Realm of Heroes!">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:description" content="Craft, collect, and oversee your own characters on this platform, tailor-made for true gaming aficionados.">
+    <!-- SEO [BASIC] -->
+		<meta name="description" content="Craft, collect, and oversee your own characters on this platform, tailor-made for true gaming aficionados.">
+		<meta name="keywords" content="StackForge, heroes, gaming, arsenal">
+		<meta name="copyright" content="GITHUB.COM/LEXPEARSON">
+		<meta name="robots" content="index, follow">
+    
+    <!-- PWA -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-title" content="StackForge Web">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="StackForge Web">
+    <meta name="application-name" content="StackForge Web">
+    <meta name="msapplication-TileColor" content="#ec1366">
+    <meta name="msapplication-TileImage" content="./images/favicon/icon-144x144.png">
+    <meta name="msapplication-config" content="browserconfig.xml?v=jw3mK7G9Ry">
+    <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png">
+    <link rel="canonical" href="https://stackforge.netlify.com/">
+    <link rel="manifest" id="manifest" href="site_apple.webmanifest">
+    
+    <!-- APPLICATION WEBVIEW-ICONS -->
+    <link rel="icon" type="image/x-png" sizes="16x16" href="./images/favicon/icon-16x16.png">
+    <link rel="icon" type="image/x-png" sizes="32x32" href="./images/favicon/icon-32x32.png">
+    <link rel="icon" type="image/x-png" sizes="64x64" href="./images/favicon/icon-64x64.png">
+    <link rel="icon" type="image/x-png" sizes="72x72" href="./images/favicon/icon-72x72.png">
+    <link rel="icon" type="image/x-png" sizes="128x128" href="./images/favicon/icon-128x128.png">
+    
+    <!-- APPLICATION WEBVIEW-TITLE -->
+		<title>StackForge</title>
+		
+		<!-- GOOGLE STATICS -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		
+		<!-- PRIMARY STYLESHEET -->
+		<link rel="stylesheet" href="./styles/primary.css" type="text/css">
+		
+		<!-- ICON LIBRARY SCRIPT -->
+		<script src="./vendors/js/lordicon-icons/lordicon.min.js" async defer></script>
+	</head>
+	<body>
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(96008321, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
+  </script>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/96008321" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
+  <!-- /Yandex.Metrika counter -->
+    <!-- PAGE HEADER -->
+    <header class="container" role="banner">
+      <div class="container__wrapper" aria-label="StackForge">
+        <h1 aria-level="1" role="heading">StackForge</h1>
+      </div>
+    </header>
+    <!-- MAIN CONTENT -->
+    <main class="container" role="main">
+      <div class="container__wrapper">
+        <!-- FORM FOR ADDING A NEW HERO -->
+        <section class="form__wrapper" aria-labelledby="addHeroSection">
+          <form name="addHero" class="form" aria-labelledby="addHeroForm">
+            <!-- INPUT FIELD FOR HERO NAME -->
+            <label for="title">
+              <input class="form__input" type="text" name="title" id="title" placeholder="Hero" required="required"
+                     aria-placeholder="Hero" aria-label="Hero Name" />
+            </label>
+            <!-- INPUT FIELD FOR HERO DESCRIPTION -->
+            <label for="description">
+              <input class="form__input" type="text" name="description" id="description" placeholder="Legend"
+                     required="required" aria-placeholder="Legend" aria-label="Hero Description" />
+            </label>
+            <!-- HERO PARAMETERS -->
+            <div class="form__parameters" role="group" aria-labelledby="heroParameters">
+              <!-- HERO STRENGTH -->
+              <label for="str">
+                <input class="form__input parameter-input" type="number" name="str" id="str" min="1" max="99"
+                       placeholder="Strength" required="required" aria-placeholder="Strength" aria-label="Hero Strength" />
+              </label>
+              <!-- HERO AGILITY -->
+              <label for="agi">
+                <input class="form__input parameter-input" type="number" name="agi" id="agi" min="1" max="99"
+                       placeholder="Agility" required="required" aria-placeholder="Agility" aria-label="Hero Agility" />
+              </label>
+              <!-- HERO HIT POINTS -->
+              <label for="hp">
+                <input class="form__input parameter-input" type="number" name="hp" id="hp" min="1" max="100"
+                       placeholder="Hit Points" required="required" aria-placeholder="Hit Points" aria-label="Hero Hit Points" />
+              </label>
+              <!-- HERO INTELLIGENCE -->
+              <label for="int">
+                <input class="form__input parameter-input" type="number" name="int" id="int" min="1" max="99"
+                       placeholder="Intelligence" required="required" aria-placeholder="Intelligence" aria-label="Hero Intelligence" />
+              </label>
+            </div>
+            <!-- BUTTON TO ADD A NEW HERO -->
+            <button class="form__button" id="addHero" type="submit" aria-label="Add new hero" aria-labelledby="addHeroForm addHero">
+              <!-- ADD HERO TEXT -->
+              Add
+            </button>
+            <!-- ERROR MESSAGE -->
+            <p id="errorText" aria-live="assertive" aria-atomic="true" role="alert"></p>
+          </form>
+        </section>
+        <!-- CONTAINER FOR HERO CARDS -->
+        <section class="cards" id="cards-container" aria-live="polite" aria-atomic="true" role="region"></section>
+      </div>
+    </main>
+    <!-- PAGE FOOTER -->
+    <footer class="container" role="contentinfo">
+      <div class="container__wrapper">
+        <!-- AUTHOR -->
+        <p aria-label="Author Information" role="note">
+          With
+          <lord-icon
+            src="./vendors/js/lordicon-icons/icons/heart.json"
+            trigger="loop-on-hover"
+            delay="500"
+            style="width:32px;height:32px" aria-label="Heart Icon">
+          </lord-icon>
+          from
+          <a target="_blank" href="https://github.com/lexpearson" aria-label="Lex Pearson's GitHub Profile">
+            @lexpearson
+          </a>
+        </p>
+      </div>
+    </footer>
+    <!-- CONNECTING SCRIPTS (BUNDLE, PWA) -->
+    <script src="./scripts/bundle.js" async defer></script>
+    <script type="text/javascript">
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./service-worker.js")
+          .then((registration) => {
+            console.log("Service Worker registered with scope:", registration.scope);
+          })
+          .catch((error) => {
+            console.error("Service Worker registration failed:", error);
+          });
+      }
+    </script>
+  </body>
+</html>
