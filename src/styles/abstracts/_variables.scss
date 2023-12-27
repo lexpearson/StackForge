@@ -1,0 +1,127 @@
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-50: rgb(245, 242, 239);
+    --text-100: rgb(236, 230, 223);
+    --text-200: rgb(217, 205, 191);
+    --text-300: rgb(198, 180, 159);
+    --text-400: rgb(179, 155, 128);
+    --text-500: rgb(159, 130, 96);
+    --text-600: rgb(128, 104, 77);
+    --text-700: rgb(96, 78, 57);
+    --text-800: rgb(64, 52, 38);
+    --text-900: rgb(32, 26, 19);
+    --text-950: rgb(16, 13, 10);
+
+    --background-50: rgb(246, 243, 238);
+    --background-100: rgb(238, 231, 221);
+    --background-200: rgb(221, 207, 187);
+    --background-300: rgb(204, 184, 153);
+    --background-400: rgb(187, 160, 119);
+    --background-500: rgb(170, 136, 85);
+    --background-600: rgb(136, 109, 68);
+    --background-700: rgb(102, 82, 51);
+    --background-800: rgb(68, 54, 34);
+    --background-900: rgb(34, 27, 17);
+    --background-950: rgb(17, 14, 9);
+
+    --primary-50: rgb(253, 231, 240);
+    --primary-100: rgb(251, 208, 224);
+    --primary-200: rgb(247, 161, 194);
+    --primary-300: rgb(244, 113, 163);
+    --primary-400: rgb(240, 66, 133);
+    --primary-500: rgb(236, 19, 102);
+    --primary-600: rgb(189, 15, 82);
+    --primary-700: rgb(142, 11, 61);
+    --primary-800: rgb(94, 8, 41);
+    --primary-900: rgb(47, 4, 20);
+    --primary-950: rgb(24, 2, 10);
+
+    --secondary-50: rgb(255, 242, 229);
+    --secondary-100: rgb(255, 230, 204);
+    --secondary-200: rgb(255, 204, 153);
+    --secondary-300: rgb(255, 179, 102);
+    --secondary-400: rgb(255, 153, 51);
+    --secondary-500: rgb(255, 128, 0);
+    --secondary-600: rgb(204, 102, 0);
+    --secondary-700: rgb(153, 76, 0);
+    --secondary-800: rgb(102, 51, 0);
+    --secondary-900: rgb(51, 26, 0);
+    --secondary-950: rgb(26, 13, 0);
+
+    --accent-50: rgb(255, 246, 229);
+    --accent-100: rgb(255, 237, 204);
+    --accent-200: rgb(255, 219, 153);
+    --accent-300: rgb(255, 201, 102);
+    --accent-400: rgb(255, 184, 51);
+    --accent-500: rgb(255, 166, 0);
+    --accent-600: rgb(204, 133, 0);
+    --accent-700: rgb(153, 99, 0);
+    --accent-800: rgb(102, 66, 0);
+    --accent-900: rgb(51, 33, 0);
+    --accent-950: rgb(26, 17, 0);
+
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-50: rgb(16, 13, 10);
+    --text-100: rgb(32, 26, 19);
+    --text-200: rgb(64, 52, 38);
+    --text-300: rgb(96, 78, 57);
+    --text-400: rgb(128, 104, 77);
+    --text-500: rgb(159, 130, 96);
+    --text-600: rgb(179, 155, 128);
+    --text-700: rgb(198, 180, 159);
+    --text-800: rgb(217, 205, 191);
+    --text-900: rgb(236, 230, 223);
+    --text-950: rgb(245, 242, 239);
+
+    --background-50: rgb(17, 14, 9);
+    --background-100: rgb(34, 27, 17);
+    --background-200: rgb(68, 54, 34);
+    --background-300: rgb(102, 82, 51);
+    --background-400: rgb(136, 109, 68);
+    --background-500: rgb(170, 136, 85);
+    --background-600: rgb(187, 160, 119);
+    --background-700: rgb(204, 184, 153);
+    --background-800: rgb(221, 207, 187);
+    --background-900: rgb(238, 231, 221);
+    --background-950: rgb(246, 243, 238);
+
+    --primary-50: rgb(24, 2, 10);
+    --primary-100: rgb(47, 4, 20);
+    --primary-200: rgb(94, 8, 41);
+    --primary-300: rgb(142, 11, 61);
+    --primary-400: rgb(189, 15, 82);
+    --primary-500: rgb(236, 19, 102);
+    --primary-600: rgb(240, 66, 133);
+    --primary-700: rgb(244, 113, 163);
+    --primary-800: rgb(247, 161, 194);
+    --primary-900: rgb(251, 208, 224);
+    --primary-950: rgb(253, 231, 240);
+
+    --secondary-50: rgb(26, 13, 0);
+    --secondary-100: rgb(51, 26, 0);
+    --secondary-200: rgb(102, 51, 0);
+    --secondary-300: rgb(153, 76, 0);
+    --secondary-400: rgb(204, 102, 0);
+    --secondary-500: rgb(255, 128, 0);
+    --secondary-600: rgb(255, 153, 51);
+    --secondary-700: rgb(255, 179, 102);
+    --secondary-800: rgb(255, 204, 153);
+    --secondary-900: rgb(255, 230, 204);
+    --secondary-950: rgb(255, 242, 229);
+
+    --accent-50: rgb(26, 17, 0);
+    --accent-100: rgb(51, 33, 0);
+    --accent-200: rgb(102, 66, 0);
+    --accent-300: rgb(153, 99, 0);
+    --accent-400: rgb(204, 133, 0);
+    --accent-500: rgb(255, 166, 0);
+    --accent-600: rgb(255, 184, 51);
+    --accent-700: rgb(255, 201, 102);
+    --accent-800: rgb(255, 219, 153);
+    --accent-900: rgb(255, 237, 204);
+    --accent-950: rgb(255, 246, 229);
+  }
+}
