@@ -1,0 +1,30 @@
+{
+  "name": "stackforge",
+  "version": "1.0.0",
+  "description": "StackForge — Your Noble Arsenal in the Virtual Realm of Heroes!",
+  "main": "bundle.js",
+  "scripts": {
+    "build": "tsc && npm run format",
+    "build --force": "npx tsc && npm run format",
+    "format": "prettier --write src/**/*.js && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexpearson/StackForge.git"
+  },
+  "author": "LexPearson <u.stonks.in.my.eyes@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lexpearson/StackForge/issues"
+  },
+  "homepage": "https://github.com/lexpearson/StackForge#readme",
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/webpack": "^5.28.5",
+    "prettier": "^3.1.1",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
