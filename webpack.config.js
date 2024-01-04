@@ -3,7 +3,7 @@ const loaders = require('./loader.js');
 
 module.exports = {
   mode: 'development', // or 'production'
-  entry: './src/scripts/modules/js/main.js',
+  entry: './src/scripts/modules/ts/main.ts',
   output: {
     path: path.resolve(__dirname, './src/scripts'),
     filename: 'bundle.js'

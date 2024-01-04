@@ -1,11 +1,15 @@
+/**
+ * ApiService class handles communication with the API for hero-related operations.
+ */
 class ApiService {
   private readonly apiUrl: string;
   private readonly studentEmail: string;
 
   /**
-   * Конструктор класса ApiService.
-   * @param apiUrl - URL API для запросов.
-   * @param studentEmail - Email студента для фильтрации данных.
+   * Constructs an instance of ApiService.
+   *
+   * @param apiUrl - The base URL of the API.
+   * @param studentEmail - The email of the student making requests to the API.
    */
   constructor(apiUrl: string, studentEmail: string) {
     this.apiUrl = apiUrl;
@@ -13,8 +17,10 @@ class ApiService {
   }
 
   /**
-   * Получает данные о героях с сервера.
-   * @return Промис с массивом данных о героях.
+   * Fetches the list of heroes from the API for the current student.
+   *
+   * @returns A promise that resolves to an array of hero objects.
+   * @throws Error if there's an issue fetching the heroes.
    */
   async getHeroes(): Promise<any[]> {
     try {
@@ -23,14 +29,16 @@ class ApiService {
       );
       return await response.json();
     } catch (error) {
-      throw new Error('Произошла ошибка при получении героев');
+      throw new Error('An error occurred while fetching heroes!');
     }
   }
 
   /**
-   * Добавляет нового героя на сервер.
-   * @param newHeroData - Данные нового героя.
-   * @return Промис с данными о добавленном герое.
+   * Adds a new hero to the API.
+   *
+   * @param newHeroData - The data of the new hero to be added.
+   * @returns A promise that resolves to the data of the added hero.
+   * @throws Error if there's an issue adding the hero.
    */
   async addHero(newHeroData: any): Promise<any> {
     try {
@@ -38,13 +46,13 @@ class ApiService {
         method: 'POST',
         body: JSON.stringify(newHeroData),
         headers: {
-          'Content-type': 'application/json; charset=UTF-8'
+          'Content-Type': 'application/json; charset=UTF-8'
         }
       });
 
       return await response.json();
     } catch (error) {
-      throw new Error('Произошла ошибка при добавлении героя');
+      throw new Error('Произошла ошибка при добавлении героя!');
     }
   }
 }
