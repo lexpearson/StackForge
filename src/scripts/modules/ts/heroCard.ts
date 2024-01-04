@@ -1,13 +1,16 @@
+/**
+ * Represents a HeroCard that displays information about a hero.
+ */
 class HeroCard {
   private readonly title: string;
   private readonly description: string;
   private readonly parameters: Record<string, string>;
 
   /**
-   * Конструктор класса HeroCard.
-   * @param title - Заголовок героя.
-   * @param description - Описание героя.
-   * @param parameters - Параметры героя.
+   * Creates an instance of HeroCard.
+   * @param {string} title - The title of the hero.
+   * @param {string} description - The description of the hero.
+   * @param {Record<string, string>} parameters - The parameters of the hero.
    */
   constructor(
     title: string,
@@ -20,43 +23,43 @@ class HeroCard {
   }
 
   /**
-   * Отрисовывает HTML-разметку карточки героя.
-   * @return HTML-разметка карточки героя в виде строки.
+   * Renders HTML markup for the HeroCard.
+   * @return {string} - The HTML markup representing the HeroCard.
    */
   render(): string {
     return `
-      <div class="card-wrapper">
-          <div class="card">
-              <div class="card-title">
-                  <h2 class="card-title-text">${this.title}</h2>
-              </div>
-              <div class="card-description">
-                  <p class="card-description-text">${this.description}</p>
-                  <div class="card-parameters">
-                      ${Object.entries(this.parameters)
-                        .map(([key, value]) =>
-                          this.createParameterHtml(key, value)
-                        )
-                        .join('')}
-                  </div>
-              </div>
+      <div class="card" role="region" aria-labelledby="cardTitle">
+        <div class="card__wrapper">
+          <div class="card__title" role="heading" aria-level="3" id="cardTitle">
+            <h3 class="card__title__text">${this.title}</h3>
           </div>
+          <div class="card__description">
+            <p class="card__description__text" role="paragraph">${
+              this.description
+            }</p>
+            <ul class="card__description__params" role="list">
+              ${Object.entries(this.parameters)
+                .map(([key, value]) => this.createParameterHtml(key, value))
+                .join('')}
+            </ul>
+          </div>
+        </div>
       </div>
     `;
   }
 
   /**
-   * Вспомогательный метод для создания HTML-разметки параметра героя.
-   * @param title - Заголовок параметра.
-   * @param value - Значение параметра.
-   * @return HTML-разметка параметра героя в виде строки.
+   * Creates HTML markup for a parameter.
+   * @param {string} title - The title of the parameter.
+   * @param {string} value - The value of the parameter.
+   * @return {string} - The HTML markup representing the parameter.
    */
   private createParameterHtml(title: string, value: string): string {
     return `
-      <div class="card-parameter">
-          <p class="card-parameter-title">${title}</p>
-          <p class="card-parameter-value">${value}</p>
-      </div>
+      <li class="card__param" role="listitem">
+          <p class="card__param__title" role="paragraph">${title}</p>
+          <p class="card__param__value" role="paragraph">${value}</p>
+      </li>
     `;
   }
 }

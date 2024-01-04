@@ -2,36 +2,30 @@ import ApiService from './apiService';
 import HeroCard from './heroCard';
 
 class HeroController {
+  public readonly studentEmail: string;
   private readonly apiService: ApiService;
   private readonly heroCardContainer: HTMLElement | null;
   private readonly form: HTMLFormElement | null;
   private readonly addHeroButton: HTMLButtonElement | null;
   private readonly errorText: HTMLElement | null;
 
-  /**
-   * Конструктор класса HeroController.
-   * @param apiUrl - URL API для запросов.
-   * @param studentEmail - Email студента для фильтрации данных.
-   * @param containerId - ID контейнера для карточек героев.
-   * @param formId - ID формы для добавления нового героя.
-   */
   constructor(
     apiUrl: string,
     studentEmail: string,
     containerId: string,
     formId: string
   ) {
-    this.apiService = new ApiService(apiUrl, studentEmail);
+    this.studentEmail = studentEmail;
+    this.apiService = new ApiService(apiUrl, this.studentEmail);
+
     this.heroCardContainer = document.getElementById(containerId);
     this.form = document.forms.namedItem(formId);
     this.addHeroButton = document.querySelector('#addHero');
     this.errorText = document.querySelector('#errorText');
+
     this.initialize();
   }
 
-  /**
-   * Инициализирует контроллер.
-   */
   private initialize(): void {
     if (
       !this.heroCardContainer ||
@@ -39,7 +33,11 @@ class HeroController {
       !this.addHeroButton ||
       !this.errorText
     ) {
-      console.error('Контейнер, форма, кнопка или блок ошибки не найдены');
+      console.log(`this.heroCardContainer = ${this.heroCardContainer}`);
+      console.log(`this.form = ${this.form}`);
+      console.log(`this.addHeroButton = ${this.addHeroButton}`);
+      console.log(`this.errorText = ${this.errorText}`);
+      console.error('Контейнер, форма, кнопка или блок ошибки не найдены!');
       return;
     }
 
@@ -47,9 +45,6 @@ class HeroController {
     this.fetchAndRenderHeroes();
   }
 
-  /**
-   * Получает данные о героях с сервера и отрисовывает их.
-   */
   private async fetchAndRenderHeroes(): Promise<void> {
     try {
       const heroes = await this.apiService.getHeroes();
@@ -59,10 +54,6 @@ class HeroController {
     }
   }
 
-  /**
-   * Отрисовывает карточки героев.
-   * @param heroesData - Массив данных о героях.
-   */
   private renderHeroes(heroesData: any[]): void {
     this.clearContainer();
 
@@ -83,24 +74,17 @@ class HeroController {
     }
   }
 
-  /**
-   * Очищает контейнер с карточками героев.
-   */
   private clearContainer(): void {
-    if (this.heroCardContainer) {
+    if (this.heroCardContainer && this.heroCardContainer.children.length > 0) {
       this.heroCardContainer.innerHTML = '';
     }
   }
 
-  /**
-   * Обрабатывает событие отправки формы.
-   * @param evt - Объект события.
-   */
   private async handleFormSubmit(evt: Event): Promise<void> {
     evt.preventDefault();
 
     if (!this.addHeroButton) {
-      console.error('Кнопка "Добавить героя" не найдена');
+      console.error('Кнопка "Добавить героя" не найдена!');
       return;
     }
 
@@ -108,31 +92,33 @@ class HeroController {
     this.addHeroButton.textContent = 'Отправка данных...';
 
     // @ts-ignore
-    const newHeroData = {
-      title: this.form?.elements.title?.value,
-      description: this.form?.elements.description?.value,
-      str: this.form?.elements.str?.value,
-      agi: this.form?.elements.agi?.value,
-      hp: this.form?.elements.hp?.value,
-      int: this.form?.elements.int?.value,
-      studentEmail: 'awesome.windofantasi@yandex.ru'
-    };
+    const formData = new FormData(this.form);
 
-    if (this.isValidHeroData(newHeroData)) {
-      await this.addHeroToServer(newHeroData);
-      await this.fetchAndRenderHeroes();
-    } else {
-      console.error('Некорректные данные нового героя:', newHeroData);
+    try {
+      const newHeroData: any = {
+        studentEmail: this.studentEmail,
+        title: formData.get('title') as string,
+        description: formData.get('description') as string,
+        str: formData.get('str') as string,
+        agi: formData.get('agi') as string,
+        hp: formData.get('hp') as string,
+        int: formData.get('int') as string
+      };
+
+      if (this.isValidHeroData(newHeroData)) {
+        await this.addHeroToServer(newHeroData);
+        await this.fetchAndRenderHeroes();
+      } else {
+        console.error('Некорректные данные нового героя:', newHeroData);
+      }
+    } catch (error) {
+      console.error('Ошибка при обработке формы:', (error as Error).message);
     }
 
     this.addHeroButton.disabled = false;
     this.addHeroButton.textContent = 'Отправить';
   }
 
-  /**
-   * Добавляет нового героя на сервер.
-   * @param newHeroData - Данные нового героя.
-   */
   private async addHeroToServer(newHeroData: any): Promise<void> {
     try {
       const data = await this.apiService.addHero(newHeroData);
@@ -145,24 +131,26 @@ class HeroController {
         if (this.form) {
           this.form.reset();
         }
+
+        if (this.heroCardContainer) {
+          this.heroCardContainer.insertAdjacentHTML(
+            'beforeend',
+            heroCard.render()
+          );
+        }
       } else {
         console.error('Некорректные данные нового героя:', data);
         if (this.errorText) {
-          this.errorText.textContent = 'Произошла ошибка при добавлении героя';
+          this.errorText.textContent = 'Произошла ошибка при добавлении героя!';
         }
       }
     } catch (error) {
       if (this.errorText) {
-        this.errorText.textContent = 'Произошла ошибка на сервере';
+        this.errorText.textContent = 'Произошла ошибка на сервере!';
       }
     }
   }
 
-  /**
-   * Проверяет корректность данных героя.
-   * @param heroData - Данные героя.
-   * @return `true`, если данные корректны, иначе `false`.
-   */
   private isValidHeroData(heroData: any): boolean {
     const requiredFields = ['title', 'description', 'str', 'agi', 'hp', 'int'];
     return requiredFields.every((field) => field in heroData);

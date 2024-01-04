@@ -62,30 +62,6 @@
     
     <!-- ICON LIBRARY SCRIPT -->
     <script src="./vendors/js/lordicon-icons/lordicon.min.js" async defer></script>
-    <script type="text/javascript">
-      (function(){
-        document.oncopy = function (){
-          var bodyElement = document.body;
-          var selection = getSelection();
-          var href = document.location.href;
-          
-          var copyright = "<br><br>☞ Источник: <a href='" + href + "'>" + 'www.moviecorn.com' + "</a><br>";
-          var text = selection + copyright;
-          
-          var divElement = document.createElement("div");
-          
-          divElement.style.position = "absolute";
-          divElement.style.left = "-99999px";
-          divElement.innerHTML = text;
-          bodyElement.appendChild(divElement);
-          selection.selectAllChildren(divElement);
-          
-          setTimeout(function (){
-            bodyElement.removeChild(divElement);
-          }, 0);
-        }
-      })();
-    </script>
   </head>
   <body>
   <!-- Yandex.Metrika counter -->
@@ -107,38 +83,43 @@
       <div class="container__wrapper">
         <!-- FORM FOR ADDING A NEW HERO -->
         <section class="form__wrapper" aria-labelledby="addHeroSection">
-          <form name="addHero" class="form" aria-labelledby="addHeroForm">
-            <!-- INPUT FIELD FOR HERO NAME -->
+          <form name="addHero" class="form" role="form" aria-labelledby="addHeroForm">
+            <!-- HERO NAME -->
             <label for="title">
               <input class="form__input" type="text" name="title" id="title" placeholder="Hero" required="required"
                      aria-placeholder="Hero" aria-label="Hero Name" />
             </label>
-            <!-- INPUT FIELD FOR HERO DESCRIPTION -->
+            <!-- HERO LEGEND -->
             <label for="description">
               <input class="form__input" type="text" name="description" id="description" placeholder="Legend"
                      required="required" aria-placeholder="Legend" aria-label="Hero Description" />
             </label>
             <!-- HERO PARAMETERS -->
             <div class="form__parameters" role="group" aria-labelledby="heroParameters">
-              <!-- HERO STRENGTH -->
+              <!-- STRENGTH -->
               <label for="str">
                 <input class="form__input parameter-input" type="number" name="str" id="str" min="1" max="99"
                        placeholder="Strength" required="required" aria-placeholder="Strength" aria-label="Hero Strength" />
               </label>
-              <!-- HERO AGILITY -->
+              <!-- AGILITY -->
               <label for="agi">
                 <input class="form__input parameter-input" type="number" name="agi" id="agi" min="1" max="99"
                        placeholder="Agility" required="required" aria-placeholder="Agility" aria-label="Hero Agility" />
               </label>
-              <!-- HERO HIT POINTS -->
+              <!-- HIT POINTS -->
               <label for="hp">
                 <input class="form__input parameter-input" type="number" name="hp" id="hp" min="1" max="100"
                        placeholder="Hit Points" required="required" aria-placeholder="Hit Points" aria-label="Hero Hit Points" />
               </label>
-              <!-- HERO INTELLIGENCE -->
+              <!-- INTELLIGENCE -->
               <label for="int">
                 <input class="form__input parameter-input" type="number" name="int" id="int" min="1" max="99"
                        placeholder="Intelligence" required="required" aria-placeholder="Intelligence" aria-label="Hero Intelligence" />
+              </label>
+              <!-- AVATAR -->
+              <label for="avatar">
+                <input class="form__input" type="file" name="avatar" id="avatar" accept="image/*"
+                       aria-label="Hero Avatar" />
               </label>
             </div>
             <!-- BUTTON TO ADD A NEW HERO -->
@@ -151,7 +132,7 @@
           </form>
         </section>
         <!-- CONTAINER FOR HERO CARDS -->
-        <section class="cards" id="cards-container" aria-live="polite" aria-atomic="true" role="region"></section>
+        <section id="cards__container" aria-live="polite" aria-atomic="true" role="region"></section>
       </div>
     </main>
     <!-- PAGE FOOTER -->
