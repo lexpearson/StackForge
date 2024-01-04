@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const apiUrl = 'https://api-code.practicum-team.ru/heroes/';
 
   // Student's email address for identification
-  const studentEmail = 'awesome.windofantasi@yandex.ru';
+  const studentEmail = 'your_email@email.com';
 
   // Creating an instance of the HeroController class to manage heroes
   const heroController = new HeroController(
