@@ -1,166 +1,335 @@
-<!DOCTYPE html>
+<!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
   <head>
     <!-- META TAGS -->
-    <meta charset="UTF-8">
-    <meta name="theme-color" content="#ec1366">
-    <meta name="color-scheme" content="light">
-    
-    <meta name="format-detection" content="address=no">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
-    
-    <meta name="google" content="notranslate">
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover shrink-to-fit=no user-scalable=no">
-    
+    <meta charset="UTF-8" />
+    <meta name="theme-color" content="#100923" />
+    <meta name="color-scheme" content="light" />
+
+    <meta name="format-detection" content="address=no" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+
+    <meta name="google" content="notranslate" />
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, viewport-fit=cover shrink-to-fit=no user-scalable=no"
+    />
+
     <!-- SEO [OPEN GRAPH] -->
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_EN">
-    <meta property="og:site_name" content="StackForge">
-    <meta property="og:title" content="StackForge - Your Noble Arsenal in the Virtual Realm of Heroes!">
-    <meta property="og:description" content="Craft, collect, and oversee your own characters on this platform, tailor-made for true gaming aficionados.">
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_EN" />
+    <meta property="og:site_name" content="StackForge" />
+    <meta property="og:title" content="StackForge — Your Noble Arsenal in the Virtual Realm of Heroes!" />
+    <meta
+      property="og:description"
+      content="Craft, collect, and oversee your own characters on this platform, tailor-made for true gaming aficionados."
+    />
     <!-- SEO [X, AKA TWITTER] -->
-    <meta name="twitter:title" content="StackForge - Your Noble Arsenal in the Virtual Realm of Heroes!">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:description" content="Craft, collect, and oversee your own characters on this platform, tailor-made for true gaming aficionados.">
+    <meta name="twitter:title" content="StackForge — Your Noble Arsenal in the Virtual Realm of Heroes!" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:description"
+      content="Craft, collect, and oversee your own characters on this platform, tailor-made for true gaming aficionados."
+    />
     <!-- SEO [BASIC] -->
-    <meta name="description" content="Craft, collect, and oversee your own characters on this platform, tailor-made for true gaming aficionados.">
-    <meta name="keywords" content="StackForge, heroes, gaming, arsenal">
-    <meta name="copyright" content="GITHUB.COM/LEXPEARSON">
-    <meta name="robots" content="index, follow">
-    
+    <meta
+      name="description"
+      content="Craft, collect, and oversee your own characters on this platform, tailor-made for true gaming aficionados."
+    />
+    <meta name="keywords" content="StackForge, heroes, gaming, arsenal" />
+    <meta name="copyright" content="GITHUB.COM/LEXPEARSON" />
+    <meta name="robots" content="index, follow" />
+
     <!-- PWA -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-title" content="StackForge Web">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="StackForge Web">
-    <meta name="application-name" content="StackForge Web">
-    <meta name="msapplication-TileColor" content="#ec1366">
-    <meta name="msapplication-TileImage" content="./images/favicon/icon-144x144.png">
-    <meta name="msapplication-config" content="browserconfig.xml?v=jw3mK7G9Ry">
-    <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png">
-    <link rel="canonical" href="https://stackforge.netlify.com/">
-    <link rel="manifest" id="manifest" href="site_apple.webmanifest">
-    
+    <!--    <link rel="apple-touch-icon" href="./images/favicon/apple-touch-icon.png" />-->
+    <link rel="canonical" href="https://stackforge.netlify.com/" />
+
     <!-- APPLICATION WEBVIEW-ICONS -->
-    <link rel="icon" type="image/x-png" sizes="16x16" href="./images/favicon/icon-16x16.png">
-    <link rel="icon" type="image/x-png" sizes="32x32" href="./images/favicon/icon-32x32.png">
-    <link rel="icon" type="image/x-png" sizes="64x64" href="./images/favicon/icon-64x64.png">
-    <link rel="icon" type="image/x-png" sizes="72x72" href="./images/favicon/icon-72x72.png">
-    <link rel="icon" type="image/x-png" sizes="128x128" href="./images/favicon/icon-128x128.png">
-    
+    <link rel="icon" type="image/x-png" sizes="16x16" href="./images/favicon/icon-16x16.png" />
+    <link rel="icon" type="image/x-png" sizes="32x32" href="./images/favicon/icon-32x32.png" />
+    <link rel="icon" type="image/x-png" sizes="64x64" href="./images/favicon/icon-64x64.png" />
+    <link rel="icon" type="image/x-png" sizes="72x72" href="./images/favicon/icon-72x72.png" />
+    <link rel="icon" type="image/x-png" sizes="128x128" href="./images/favicon/icon-128x128.png" />
+
     <!-- APPLICATION WEBVIEW-TITLE -->
-    <title>StackForge</title>
-    
+    <title>StackForge — Your Noble Arsenal in the Virtual Realm of Heroes! 🪄</title>
+
     <!-- GOOGLE STATICS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <!-- PRIMARY STYLESHEET -->
-    <link rel="stylesheet" href="./styles/primary.css" type="text/css">
-    
-    <!-- ICON LIBRARY SCRIPT -->
-    <script src="./vendors/js/lordicon-icons/lordicon.min.js" async="async" defer="defer"></script>
+    <link rel="stylesheet" href="./assets/css/primary.css" type="text/css" />
   </head>
   <body>
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (let j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(96008321, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true });
-  </script>
-  <noscript>
-    <div><img src="https://mc.yandex.ru/watch/96008321" style="position:absolute; left:-9999px;" alt="" /></div>
-  </noscript>
-  <!-- /Yandex.Metrika counter -->
-    <!-- PAGE HEADER -->
-    <header class="container" role="banner">
-      <div class="container__wrapper" aria-label="StackForge">
-        <h1 aria-level="1" role="heading">StackForge</h1>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] =
+          m[i] ||
+          function () {
+            (m[i].a = m[i].a || []).push(arguments);
+          };
+        m[i].l = 1 * new Date();
+        for (let j = 0; j < document.scripts.length; j++) {
+          if (document.scripts[j].src === r) {
+            return;
+          }
+        }
+        (k = e.createElement(t)),
+          (a = e.getElementsByTagName(t)[0]),
+          (k.async = 1),
+          (k.src = r),
+          a.parentNode.insertBefore(k, a);
+      })(window, document, 'script', 'https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js', 'ym');
+      ym(96008321, 'init', {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true
+      });
+    </script>
+    <noscript>
+      <div>
+        <img src="https://mc.yandex.ru/watch/96008321" style="position: absolute; left: -99999px" alt="" />
+      </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    <header>
+      <div class="container">
+        <h1 class="page__heading">✨StackForge</h1>
       </div>
     </header>
-    <!-- MAIN CONTENT -->
-    <main class="container" role="main">
-      <div class="container__wrapper">
-        <!-- FORM FOR ADDING A NEW HERO -->
-        <section class="form__wrapper" aria-labelledby="addHeroSection">
-          <form name="addHero" class="form" role="form" aria-labelledby="addHeroForm">
-            <!-- HERO NAME -->
-            <label for="title">
-              <input class="form__input" type="text" name="title" id="title" placeholder="Hero" required="required"
-                     aria-placeholder="Hero" aria-label="Hero Name" />
+    <main class="container">
+      <div class="game-zones">
+        <section class="form__wrapper">
+          <form id="heroForm" class="form" onsubmit="event.preventDefault()">
+            <label class="radio__label__title">Class</label>
+
+            <div class="radio__row">
+              <input class="radio__input" name="class" type="radio" id="classMage" value="Mage" checked />
+              <label class="radio__label" for="classMage">Mage 🔮</label>
+
+              <input class="radio__input" type="radio" id="classKnight" name="class" value="Knight" />
+              <label class="radio__label" for="classKnight"> Knight 🗡</label>
+            </div>
+
+            <label class="form__input__label" for="name">
+              <input
+                class="form__input"
+                type="text"
+                id="name"
+                name="name"
+                maxlength="24"
+                placeholder="Name"
+                required="required"
+              />
             </label>
-            <!-- HERO LEGEND -->
-            <label for="description">
-              <input class="form__input" type="text" name="description" id="description" placeholder="Legend"
-                     required="required" aria-placeholder="Legend" aria-label="Hero Description" />
+
+            <label class="form__input__label" for="level">
+              <input
+                class="form__input"
+                type="number"
+                maxlength="2"
+                id="level"
+                min="1"
+                max="10"
+                name="levelLevel"
+                placeholder="Level"
+                required="required"
+              />
             </label>
-            <!-- HERO PARAMETERS -->
-            <div class="form__parameters" role="group" aria-labelledby="heroParameters">
-              <!-- STRENGTH -->
-              <label for="str">
-                <input class="form__input parameter-input" type="number" name="str" id="str" min="1" max="99"
-                       placeholder="Strength" required="required" aria-placeholder="Strength" aria-label="Hero Strength" />
+
+            <div class="form__parameters">
+              <label class="form__input__label" for="strength">
+                <input
+                  class="form__input form__parameters__input"
+                  type="number"
+                  maxlength="2"
+                  min="1"
+                  max="99"
+                  id="strength"
+                  name="strength"
+                  placeholder="Strength"
+                  required="required"
+                />
               </label>
-              <!-- AGILITY -->
-              <label for="agi">
-                <input class="form__input parameter-input" type="number" name="agi" id="agi" min="1" max="99"
-                       placeholder="Agility" required="required" aria-placeholder="Agility" aria-label="Hero Agility" />
+
+              <label class="form__input__label" for="intelligence">
+                <input
+                  class="form__input form__parameters__input"
+                  type="number"
+                  maxlength="2"
+                  min="1"
+                  max="99"
+                  id="intelligence"
+                  name="intelligence"
+                  placeholder="Intelligence"
+                  required="required"
+                />
               </label>
-              <!-- HIT POINTS -->
-              <label for="hp">
-                <input class="form__input parameter-input" type="number" name="hp" id="hp" min="1" max="100"
-                       placeholder="Hit Points" required="required" aria-placeholder="Hit Points" aria-label="Hero Hit Points" />
+
+              <label class="form__input__label" for="agility">
+                <input
+                  class="form__input form__parameters__input"
+                  type="number"
+                  maxlength="2"
+                  min="1"
+                  max="99"
+                  id="agility"
+                  name="agility"
+                  placeholder="Agility"
+                  required="required"
+                />
               </label>
-              <!-- INTELLIGENCE -->
-              <label for="int">
-                <input class="form__input parameter-input" type="number" name="int" id="int" min="1" max="99"
-                       placeholder="Intelligence" required="required" aria-placeholder="Intelligence" aria-label="Hero Intelligence" />
+
+              <label class="form__input__label" for="additionalStat">
+                <input
+                  class="form__input form__parameters__input"
+                  type="number"
+                  id="additionalStat"
+                  maxlength="2"
+                  min="1"
+                  name="additionalStat"
+                  placeholder="Mana / Enery"
+                />
               </label>
             </div>
-            <!-- BUTTON TO ADD A NEW HERO -->
-            <button class="form__button" id="addHero" type="submit" aria-label="Add new hero" aria-labelledby="addHeroForm addHero">
-              <!-- ADD HERO TEXT -->
-              Add
-            </button>
-            <!-- ERROR MESSAGE -->
-            <p id="errorText" aria-live="assertive" aria-atomic="true" role="alert"></p>
+            <label class="radio__label__title" id="additionalAbilityText"
+              >Is there a tectonic potion? / Dancing the tango on a horse?</label
+            >
+            <div class="radio__row">
+              <input
+                class="radio__input"
+                type="radio"
+                id="additionalAbilityTrue"
+                name="additionalAbility"
+                value="true"
+                checked
+              />
+              <label class="radio__label" for="additionalAbilityTrue">Yes</label>
+
+              <input
+                class="radio__input"
+                type="radio"
+                id="additionalAbilityFalse"
+                name="additionalAbility"
+                value="false"
+              />
+              <label class="radio__label" for="additionalAbilityFalse">No</label>
+            </div>
+            <button class="form__button" id="sendToBattleButton" type="submit">Submit</button>
           </form>
         </section>
-        <!-- CONTAINER FOR HERO CARDS -->
-        <section id="cards__container" aria-live="polite" aria-atomic="true" role="region"></section>
+
+        <section class="battle-zone">
+          <div class="cards">
+            <div class="card__wrapper">
+              <h2 class="card__heading">Your hero</h2>
+              <div class="card">
+                <div class="card__content">
+                  <div class="card__title">
+                    <h2 id="playerHeroClass" class="card__class">Class</h2>
+                    <h2 id="playerHeroName" class="card__title__text">Name</h2>
+                  </div>
+                  <div class="card__description">
+                    <h3 class="card__level">
+                      Level:
+                      <span id="playerHeroLevel" class="hero__level__amount">--</span>
+                    </h3>
+                    <p class="card__parameters__heading">Stats:</p>
+                    <div class="card__parameters">
+                      <div class="card__parameter">
+                        <p class="card__parameter__title">STR</p>
+                        <span id="playerHeroStrength" class="card__parameter__value">--</span>
+                      </div>
+                      <div class="card__parameter">
+                        <p class="card__parameter__title">AGI</p>
+                        <span id="playerHeroAgility" class="card__parameter__value">--</span>
+                      </div>
+                      <div class="card__parameter">
+                        <p class="card__parameter__title">HP</p>
+                        <span id="playerHeroHp" class="card__parameter__value">--</span>
+                      </div>
+                      <div class="card__parameter">
+                        <p class="card__parameter__title">INT</p>
+                        <span id="playerHeroIntelligence" class="card__parameter__value">--</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button id="doSkillButton" class="card__button" disabled>Use skill</button>
+              </div>
+            </div>
+            <div class="card__wrapper">
+              <h2 class="card__heading">Opponent's hero</h2>
+              <div class="card">
+                <div class="card__content">
+                  <div class="card__title">
+                    <h2 id="enemyHeroClass" class="card__class">Class</h2>
+                    <h2 id="enemyHeroName" class="card__title__text">Name</h2>
+                  </div>
+                  <div class="card__description">
+                    <h3 class="card__level">
+                      Level:
+                      <span id="enemyHeroLevel" class="hero__level__amount">--</span>
+                    </h3>
+                    <p class="card__parameters__heading">Stats:</p>
+                    <div class="card__parameters">
+                      <div class="card__parameter">
+                        <p class="card__parameter__title">STR</p>
+                        <span id="enemyHeroStrength" class="card__parameter__value">--</span>
+                      </div>
+                      <div class="card__parameter">
+                        <p class="card__parameter__title">AGI</p>
+                        <span id="enemyHeroAgility" class="card__parameter__value">--</span>
+                      </div>
+                      <div class="card__parameter">
+                        <p class="card__parameter__title">HP</p>
+                        <span id="enemyHeroHp" class="card__parameter__value">--</span>
+                      </div>
+                      <div class="card__parameter">
+                        <p class="card__parameter__title">INT</p>
+                        <span id="enemyHeroIntelligence" class="card__parameter__value">--</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button id="getEnemyButton" class="card__button" disabled>Get a hero</button>
+              </div>
+            </div>
+          </div>
+          <button id="startBattleButton" class="battle-zone__button" disabled>Start the battle!</button>
+          <!--  IN THE FUTURE 👉👈  -->
+          <!--          <div id="gameResultsContainer" class="alert__container">-->
+          <!--            <div class="alert">-->
+          <!--              <div class="alert__content">-->
+          <!--                <h3 class="alert__content__title">YOU WIN</h3>-->
+          <!--                <p class="alert__content__details"></p>-->
+          <!--              </div>-->
+          <!--              <div class="alert__close">-->
+          <!--                <button class="alert__close__button"></button>-->
+          <!--              </div>-->
+          <!--            </div>-->
+          <!--          </div>-->
+          <div class="battle-zone__author">
+            <h5 class="battle-zone__author__text" aria-label="Author Information">
+              With 💜 from
+              <a
+                class="battle-zone__author__link"
+                target="_blank"
+                href="https://github.com/lexpearson"
+                aria-label="Lex Pearson's GitHub Profile"
+                >@lexpearson
+              </a>
+            </h5>
+          </div>
+        </section>
       </div>
     </main>
-    <!-- PAGE FOOTER -->
-    <footer class="container" role="contentinfo">
-      <div class="container__wrapper">
-        <!-- AUTHOR -->
-        <p aria-label="Author Information" role="note">
-          With
-          <lord-icon
-            src="./vendors/js/lordicon-icons/icons/heart.json"
-            trigger="loop-on-hover"
-            delay="500"
-            style="width:32px;height:32px" aria-label="Heart Icon">
-          </lord-icon>
-          from
-          <a target="_blank" href="https://github.com/lexpearson" aria-label="Lex Pearson's GitHub Profile">
-            @lexpearson
-          </a>
-        </p>
-      </div>
-    </footer>
-    <!-- CONNECTING SCRIPTS (BUNDLE, PWA) -->
-    <script src="./scripts/bundle.js" async defer></script>
-    <script type="text/javascript">
-      if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("./service-worker.js")
-          .then((registration) => {
-            console.log("Service Worker registered with scope:", registration.scope);
-          })
-          .catch((error) => {
-            console.error("Service Worker registration failed:", error);
-          });
-      }
-    </script>
+    <!-- CONNECTING SCRIPT (WEBPACK) -->
+    <script src="./assets/js/bundle.js" async="async"></script>
   </body>
 </html>
