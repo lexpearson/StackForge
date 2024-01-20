@@ -1,16 +1,25 @@
 {
-  "name": "stackforge",
-  "version": "1.0.0",
+  "name": "StackForge",
+  "version": "2.0.0",
   "description": "StackForge — Your Noble Arsenal in the Virtual Realm of Heroes!",
   "main": "bundle.js",
   "scripts": {
-    "delRemnantDir": "rimraf rimraf src/scripts/modules/types",
-    "build": "npm run delRemnantDir && prettier --write src/**/*.js && webpack"
+    "lint": "prettier --write \"**/*.{js,css,scss,json,config.js,md,html}\"",
+    "sass": "npx sass --style=compressed ./src/styles/primary.scss:./src/assets/css/primary.css",
+    "sass:watch": "yarn sass --watch",
+    "start": "serve -s ./src",
+    "delcompiled": "rimraf ./src/assets",
+    "build": "yarn install && yarn delcompiled && yarn lint && webpack && yarn sass && yarn start"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lexpearson/StackForge.git"
   },
+  "keywords": [
+    "stackforge",
+    "lexpearson",
+    "npm"
+  ],
   "author": "LexPearson <u.stonks.in.my.eyes@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -20,10 +29,9 @@
   "devDependencies": {
     "@types/node": "^20.10.5",
     "@types/webpack": "^5.28.5",
-    "prettier": "^3.1.1",
+    "prettier": "^3.2.4",
     "rimraf": "^5.0.5",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.3.3",
+    "sass": "^1.69.7",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   }

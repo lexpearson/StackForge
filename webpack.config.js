@@ -1,19 +1,14 @@
 const path = require('path');
-const loaders = require('./loader.js');
 
 module.exports = {
   mode: 'development', // or 'production'
-  entry: './src/scripts/modules/ts/main.ts',
+  entry: './src/scripts/index.js',
   output: {
-    path: path.resolve(__dirname, './src/scripts'),
+    path: path.resolve(__dirname, './src/assets/js'),
     filename: 'bundle.js'
   },
-  module: {
-    rules: loaders
-  },
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js'],
     modules: ['node_modules']
-  },
-  plugins: []
+  }
 };
