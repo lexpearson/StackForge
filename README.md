@@ -30,6 +30,7 @@
   <li><b>JavaScript</b></li>
   <li><b>Webpack</b></li>
   <li><b>Yarn</b></li>
+  <li><b>Serve</b></li>
   <li><b>etc...</b></li>
 </ul>
 
